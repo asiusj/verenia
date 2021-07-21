@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test for Verenia</title>
+    <style>
+        .source {
+            padding: 24px;
+        }
+
+        #source-text {
+            width: 100%;
+            min-height: 350px;
+            resize: none;
+            padding: 8px;
+        }
+
+        .result {
+            padding: 24px;
+        }
+
+        #result-body {
+            min-height: 350px;
+        }
+
+        div[id^="pos-"] {
+            display: inline;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="source">
+            <h4>Source:</h4>
+            <textarea
+                id="source-text">{{input:vvvvv3333}} sdfsdfsfsfsfsfsfsdf {{input}} sdlkfjlsdfj {{textarea}} {{textarea}}</textarea>
+        </div>
+        <div class="result">
+            <h4>Result:</h4>
+            <div id="result-body"></div>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
