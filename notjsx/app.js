@@ -28,6 +28,7 @@ class NotJsx {
 
 	export(e) {
 		if (e.target) {
+			e.target.value = this.clearValue(e.target.value);
 			this.src.value = this.update(e.target.value, e.target.dataset.index);
 		}
 	}
@@ -57,7 +58,7 @@ class NotJsx {
 		const res = this.src.value.replace(regexp, (init, comp) => {
 			if (pos === parseInt(index)) {
 				pos++;
-				return `{{${comp}${val ? ":" + val : ""}}}`;
+				return `{{${comp}${val ? ":" + this.clearValue(val) : ""}}}`;
 			} else {
 				pos++;
 				return init;
@@ -77,6 +78,10 @@ class NotJsx {
 
 	valIsComp(str) {
 		return this.available.includes(str);
+	}
+
+	clearValue(value) {
+		return value.replace(/[\{\}\+\=\|]/g, "");
 	}
 }
 
