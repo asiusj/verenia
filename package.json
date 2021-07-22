@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "start": "live-server --entry-file=index.html --port=4200 --host=localhost ./notjsx"
-  },
-  "dependencies": {
-    "live-server": "^1.2.1"
-  }
-}
